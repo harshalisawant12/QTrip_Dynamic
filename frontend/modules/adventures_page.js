@@ -143,7 +143,7 @@ function getFiltersFromLocalStorage() {
 //Implementation of DOM manipulation to add the following filters to DOM :
 // 1. Update duration filter with correct value
 // 2. Update the category pills on the DOM
-
+const fn = callbackFn => console.log(callbackFn(arg1)); const double = num => num * 2; fn(double(10));
 function generateFilterPillsAndUpdateDOM(filters) {
   // TODO: MODULE_FILTERS
   // 1. Use the filters given as input, update the Duration Filter value and Generate Category Pills
