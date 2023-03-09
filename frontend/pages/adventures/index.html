@@ -152,8 +152,7 @@
             // TODO: MODULE_FILTERS
             // 1. Change the DOM to show the selected duration filter. Use the provided input event
             document.getElementById('data').textContent="";
-            let duration=event.target.value;
-            filters.duration=duration;
+            filters.duration=event.target.value;
             // 2. Invoke saveFiltersToLocalStorage here
             let filteredAdventures=filterFunction(adventures, filters);
             addAdventureToDOM(filteredAdventures);  
