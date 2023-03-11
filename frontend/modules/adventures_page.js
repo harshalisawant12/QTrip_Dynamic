@@ -16,13 +16,14 @@ async function fetchAdventures(city) {
   try {
     const resp = await fetch(
       config.backendEndpoint + `/adventures?city=${city}`
-    );
-    const json = await resp.json();
-    console.log(json);
-    return json;
-  } catch (e) {
-    return null;
-  }
+      );
+      const json = await resp.json();
+      console.log(json);
+      return json;
+    } catch (e) {
+      return null;
+    }
+    return null
 }
 //Implementation of DOM manipulation to add adventures for the given city from list of adventures
 function addAdventureToDOM(adventures) {
@@ -143,7 +144,7 @@ function getFiltersFromLocalStorage() {
 //Implementation of DOM manipulation to add the following filters to DOM :
 // 1. Update duration filter with correct value
 // 2. Update the category pills on the DOM
-const fn = callbackFn => console.log(callbackFn(arg1)); const double = num => num * 2; fn(double(10));
+//const fn = callbackFn => console.log(callbackFn(arg1)); const double = num => num * 2; fn(double(10));
 function generateFilterPillsAndUpdateDOM(filters) {
   // TODO: MODULE_FILTERS
   // 1. Use the filters given as input, update the Duration Filter value and Generate Category Pills
